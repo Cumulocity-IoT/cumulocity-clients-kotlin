@@ -57,6 +57,8 @@ interface CurrentUserApi {
 	 * 
 	 *  ROLE_USER_MANAGEMENT_OWN_READ *OR* ROLE_SYSTEM 
 	 * 
+	 * Users with ROLE_SYSTEM are not allowed to query with Accept header `application/vnd.com.nsn.cumulocity.user+json`
+	 * 
 	 * ##### Response Codes
 	 * 
 	 * The following table gives an overview of the possible response codes and their meanings:
@@ -64,7 +66,7 @@ interface CurrentUserApi {
 	 * * HTTP 200 The request has succeeded and the current user is sent in the response.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 */
-	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.currentuser+json")
+	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.currentuser+json, application/vnd.com.nsn.cumulocity.user+json")
 	@GET("/user/currentUser")
 	fun getCurrentUser(
 	): Call<CurrentUser>
@@ -85,7 +87,7 @@ interface CurrentUserApi {
 	 * 
 	 * * HTTP 200 The current user was updated.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 */
@@ -101,7 +103,7 @@ interface CurrentUserApi {
 	 * 
 	 * Update the current user's  password.
 	 * 
-	 * > **⚠️ Important:** If the tenant uses OAI-Secure authentication, the current user will not be logged out. Instead, a new cookie will be set with a new token, and the previous token will expire within a minute.
+	 * > **������ Important:** If the tenant uses OAI-Secure authentication, the current user will not be logged out. Instead, a new cookie will be set with a new token, and the previous token will expire within a minute.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -113,7 +115,7 @@ interface CurrentUserApi {
 	 * 
 	 * * HTTP 200 The current user password was updated.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 */
@@ -217,7 +219,7 @@ interface CurrentUserApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Invalid verification code.
 	 * * HTTP 404 Cannot validate TFA TOTP code - user's TFA TOTP secret does not exist.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 */

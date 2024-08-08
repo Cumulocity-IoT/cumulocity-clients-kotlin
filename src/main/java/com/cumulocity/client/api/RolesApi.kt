@@ -166,8 +166,8 @@ interface RolesApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not authorized to perform this operation.
 	 * * HTTP 404 Group not found.
-	 * * HTTP 409 Conflict – Role already assigned to the user group.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 409 Conflict ��� Role already assigned to the user group.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId
@@ -239,7 +239,7 @@ interface RolesApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * * HTTP 404 User not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId

@@ -100,7 +100,7 @@ interface RetentionRulesApi {
 	 * * HTTP 201 A retention rule was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not authorized to perform this operation.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 */
@@ -157,7 +157,7 @@ interface RetentionRulesApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not authorized to perform this operation.
 	 * * HTTP 404 Retention rule not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param id

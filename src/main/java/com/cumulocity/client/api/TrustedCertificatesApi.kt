@@ -113,8 +113,8 @@ interface TrustedCertificatesApi {
 	 * * HTTP 201 The certificate was added to the tenant.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 404 Tenant not found.
-	 * * HTTP 409 Duplicate – A certificate with the same fingerprint already exists.
-	 * * HTTP 422 Unprocessable Entity – Invalid certificate data.
+	 * * HTTP 409 Duplicate ��� A certificate with the same fingerprint already exists.
+	 * * HTTP 422 Unprocessable Entity ��� Invalid certificate data.
 	 * 
 	 * @param body
 	 * @param tenantId
@@ -152,8 +152,8 @@ interface TrustedCertificatesApi {
 	 * * HTTP 201 The certificates were added to the tenant.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 404 Tenant not found.
-	 * * HTTP 409 Duplicate – A certificate with the same fingerprint already exists.
-	 * * HTTP 422 Unprocessable Entity – Invalid certificates data.
+	 * * HTTP 409 Duplicate ��� A certificate with the same fingerprint already exists.
+	 * * HTTP 422 Unprocessable Entity ��� Invalid certificates data.
 	 * 
 	 * @param body
 	 * @param tenantId
@@ -218,7 +218,7 @@ interface TrustedCertificatesApi {
 	 * * HTTP 200 The certificate was updated on the tenant.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 404 Certificate not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId

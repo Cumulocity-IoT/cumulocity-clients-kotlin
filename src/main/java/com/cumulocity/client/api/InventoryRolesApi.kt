@@ -98,8 +98,8 @@ interface InventoryRolesApi {
 	 * 
 	 * * HTTP 201 An inventory role was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 409 Duplicate – The inventory role already exists.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 409 Duplicate ��� The inventory role already exists.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 */
@@ -154,7 +154,7 @@ interface InventoryRolesApi {
 	 * * HTTP 200 An inventory role was updated.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 404 Role not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param id
@@ -247,7 +247,7 @@ interface InventoryRolesApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * * HTTP 404 User not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId
@@ -318,7 +318,7 @@ interface InventoryRolesApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * * HTTP 404 Role not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId

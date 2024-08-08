@@ -99,7 +99,7 @@ interface NewDeviceRequestsApi {
 	 * 
 	 * * HTTP 201 A new device request was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param xCumulocityProcessingMode

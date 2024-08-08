@@ -61,7 +61,7 @@ interface LoginOptionsApi {
 	 * The following table gives an overview of the possible response codes and their meanings:
 	 * 
 	 * * HTTP 200 The request has succeeded and the login options are sent in the response.
-	 * * HTTP 400 Bad request – invalid parameters.
+	 * * HTTP 400 Bad request ��� invalid parameters.
 	 * 
 	 * @param management
 	 * If this is set to `true`, the management tenant login options will be returned.
@@ -92,9 +92,9 @@ interface LoginOptionsApi {
 	 * The following table gives an overview of the possible response codes and their meanings:
 	 * 
 	 * * HTTP 200 A login option was created.
-	 * * HTTP 400 Duplicated – The login option already exists.
+	 * * HTTP 400 Duplicated ��� The login option already exists.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 */

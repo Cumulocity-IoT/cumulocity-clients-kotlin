@@ -27,7 +27,7 @@ class PageStatistics {
 	/**
 	 * The total number of paginated results (pages).
 	 * 
-	 * > **ⓘ Info:** This property is returned by default except when an operation retrieves all records where values are between an upper and lower boundary, for example, querying ranges using `dateFrom`–`dateTo`. In such cases, the query parameter `withTotalPages=true` should be used to include the total number of pages (at the expense of slightly slower performance).
+	 * > **ⓘ Info:** This property is returned by default except when an operation retrieves all records where values are between an upper and lower boundary, for example, querying ranges using `dateFrom`���`dateTo`. In such cases, the query parameter `withTotalPages=true` should be used to include the total number of pages (at the expense of slightly slower performance).
 	 */
 	var totalPages: Int? = null
 

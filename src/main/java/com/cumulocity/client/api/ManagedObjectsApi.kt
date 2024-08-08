@@ -26,7 +26,7 @@ import com.cumulocity.client.model.SupportedMeasurements
 import com.cumulocity.client.model.SupportedSeries
 
 /**
- * The inventory stores devices and other assets relevant to your IoT solution. We refer to them as managed objects and such can be “smart objects”, for example, smart electricity meters, home automation gateways or GPS devices.
+ * The inventory stores devices and other assets relevant to your IoT solution. We refer to them as managed objects and such can be ���smart objects���, for example, smart electricity meters, home automation gateways or GPS devices.
  * 
  * > **ⓘ Info:** The Accept header should be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
@@ -160,7 +160,7 @@ interface ManagedObjectsApi {
 	 * 
 	 * * HTTP 201 A managed object was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param xCumulocityProcessingMode
@@ -269,7 +269,7 @@ interface ManagedObjectsApi {
 	 * * HTTP 204 A managed object was removed.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 404 Managed object not found.
-	 * * HTTP 409 Conflict – The managed object is associated to other objects, for example child devices.
+	 * * HTTP 409 Conflict ��� The managed object is associated to other objects, for example child devices.
 	 * 
 	 * @param id
 	 * Unique identifier of the managed object.

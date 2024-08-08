@@ -124,7 +124,7 @@ interface OptionsApi {
 	 * 
 	 * * HTTP 200 An option was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 */
@@ -177,7 +177,7 @@ interface OptionsApi {
 	 * 
 	 * * HTTP 200 A collection of options was updated.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param category
@@ -237,7 +237,7 @@ interface OptionsApi {
 	 * * HTTP 200 An option was updated.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 404 Option not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param category

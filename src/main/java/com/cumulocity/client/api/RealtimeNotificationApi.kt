@@ -238,7 +238,7 @@ interface RealtimeNotificationApi {
 	 * The following table gives an overview of the possible response codes and their meanings:
 	 * 
 	 * * HTTP 200 The operation was completed and the result is sent in the response.
-	 * * HTTP 400 Unprocessable Entity – invalid payload.
+	 * * HTTP 400 Unprocessable Entity ��� invalid payload.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * 
 	 * @param body

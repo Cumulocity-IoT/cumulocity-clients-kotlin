@@ -17,7 +17,7 @@ class InventoryApiResource {
 	var managedObjectsForType: String? = null
 
 	/**
-	 * Read-only collection of managed objects fetched for a given list of ids, for example, “ids=41,43,68”.
+	 * Read-only collection of managed objects fetched for a given list of ids, for example, ���ids=41,43,68���.
 	 */
 	var managedObjectsForListOfIds: String? = null
 

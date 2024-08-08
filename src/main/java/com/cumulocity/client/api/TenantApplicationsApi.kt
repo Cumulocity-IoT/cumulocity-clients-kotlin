@@ -110,7 +110,7 @@ interface TenantApplicationsApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 404 Application not found.
 	 * * HTTP 409 The application is already assigned to the tenant.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId

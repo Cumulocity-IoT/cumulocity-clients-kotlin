@@ -153,7 +153,7 @@ interface AlarmsApi {
 	 * * HTTP 202 An alarm collection is being updated in background.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not authorized to perform this operation.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param xCumulocityProcessingMode
@@ -235,7 +235,7 @@ interface AlarmsApi {
 	 * * HTTP 201 An alarm was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not authorized to perform this operation.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param xCumulocityProcessingMode
@@ -254,7 +254,7 @@ interface AlarmsApi {
 	 * 
 	 * Remove alarm collections specified by query parameters.
 	 * 
-	 * > **⚠️ Important:** Note that it is possible to call this endpoint without providing any parameter - it will result in deleting all alarms and it is not recommended.Also note that DELETE requests are not synchronous. The response could be returned before the delete request has been completed.
+	 * > **������ Important:** Note that it is possible to call this endpoint without providing any parameter - it will result in deleting all alarms and it is not recommended.Also note that DELETE requests are not synchronous. The response could be returned before the delete request has been completed.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -349,7 +349,7 @@ interface AlarmsApi {
 	 * 
 	 * Update a specific alarm by a given ID.Only text, status, severity and custom properties can be modified. A request will be rejected when non-modifiable properties are provided in the request body.
 	 * 
-	 * > **ⓘ Info:** Changes to alarms will generate a new audit record. The audit record will include the username and application that triggered the update, if applicable. If the update operation doesn’t change anything (that is, the request body contains data that is identical to the already present in the database), there will be no audit record added and no notifications will be sent.
+	 * > **ⓘ Info:** Changes to alarms will generate a new audit record. The audit record will include the username and application that triggered the update, if applicable. If the update operation doesn���t change anything (that is, the request body contains data that is identical to the already present in the database), there will be no audit record added and no notifications will be sent.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -363,7 +363,7 @@ interface AlarmsApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not authorized to perform this operation.
 	 * * HTTP 404 Alarm not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param id

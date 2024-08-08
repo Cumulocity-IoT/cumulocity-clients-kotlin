@@ -123,7 +123,7 @@ interface SubscriptionsApi {
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * * HTTP 404 Managed object not found.
 	 * * HTTP 409 Duplicated subscription.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param xCumulocityProcessingMode
@@ -155,7 +155,7 @@ interface SubscriptionsApi {
 	 * * HTTP 204 A collection of subscriptions was removed.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
-	 * * HTTP 422 Unprocessable Entity – error in query parameters
+	 * * HTTP 422 Unprocessable Entity ��� error in query parameters
 	 * 
 	 * @param xCumulocityProcessingMode
 	 * Used to explicitly control the processing mode of the request. See [Processing mode](#processing-mode) for more details.

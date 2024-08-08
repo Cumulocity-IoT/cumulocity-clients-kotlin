@@ -81,7 +81,7 @@ interface UsersApi {
 	 * 
 	 * **ⓘ Info:** If you query for multiple user groups at once, comma-separate the values.
 	 * @param onlyDevices
-	 * If set to `true`, the response will only contain users created during bootstrap process (starting with “device_”).If the flag is absent or `false` the result will not contain “device_” users.
+	 * If set to `true`, the response will only contain users created during bootstrap process (starting with ���device_���).If the flag is absent or `false` the result will not contain ���device_��� users.
 	 * @param owner
 	 * Exact username of the owner of the user
 	 * @param pageSize
@@ -89,7 +89,7 @@ interface UsersApi {
 	 * @param username
 	 * Prefix or full username
 	 * @param withSubusersCount
-	 * If set to `true`, then each of returned user will contain an additional field “subusersCount”.It is the number of direct subusers (users with corresponding “owner”).
+	 * If set to `true`, then each of returned user will contain an additional field ���subusersCount���.It is the number of direct subusers (users with corresponding ���owner���).
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
 	 * @param withTotalPages
@@ -127,8 +127,8 @@ interface UsersApi {
 	 * * HTTP 201 A user was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
-	 * * HTTP 409 Duplicate – The userName or alias already exists.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 409 Duplicate ��� The userName or alias already exists.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId
@@ -199,7 +199,7 @@ interface UsersApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * * HTTP 404 User not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId
@@ -254,7 +254,7 @@ interface UsersApi {
 	 * 
 	 * Changing the user's password creates a corresponding audit record of type "User" and activity "User updated", and specifying that the password has been changed.
 	 * 
-	 * > **⚠️ Important:** If the tenant uses OAI-Secure authentication, the target user will be logged out.
+	 * > **������ Important:** If the tenant uses OAI-Secure authentication, the target user will be logged out.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -269,7 +269,7 @@ interface UsersApi {
 	 * * HTTP 200 A user was updated.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId
@@ -407,7 +407,7 @@ interface UsersApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * * HTTP 404 Group not found.
-	 * * HTTP 422 Unprocessable Entity – invalid payload.
+	 * * HTTP 422 Unprocessable Entity ��� invalid payload.
 	 * 
 	 * @param body
 	 * @param tenantId

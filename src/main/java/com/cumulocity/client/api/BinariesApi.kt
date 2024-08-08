@@ -106,8 +106,8 @@ interface BinariesApi {
 	 * 
 	 * Uploading a file (binary) requires providing the following properties:
 	 * 
-	 * * `object` – In JSON format, it contains information about the file.
-	 * * `file` – Contains the file to be uploaded.
+	 * * `object` ��� In JSON format, it contains information about the file.
+	 * * `file` ��� Contains the file to be uploaded.
 	 * 
 	 * After the file has been uploaded, the corresponding managed object will contain the fragment `c8y_IsBinary`.
 	 * 
@@ -121,7 +121,7 @@ interface BinariesApi {
 	 * The following table gives an overview of the possible response codes and their meanings:
 	 * 
 	 * * HTTP 201 A file was uploaded.
-	 * * HTTP 400 Unprocessable Entity – invalid payload.
+	 * * HTTP 400 Unprocessable Entity ��� invalid payload.
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * * HTTP 403 Not authorized to perform this operation.
 	 * 

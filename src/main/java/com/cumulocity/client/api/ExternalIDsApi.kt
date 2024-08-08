@@ -87,7 +87,7 @@ interface ExternalIDsApi {
 	 * 
 	 * * HTTP 201 An external ID was created.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 409 Duplicate – Identity already bound to a different Global ID.
+	 * * HTTP 409 Duplicate ��� Identity already bound to a different Global ID.
 	 * 
 	 * @param body
 	 * @param id
