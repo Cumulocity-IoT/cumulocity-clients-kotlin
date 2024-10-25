@@ -7,7 +7,7 @@ import com.google.gson.Gson
 /**
  * The read only fragment which contains the latest measurements reported by the device.The returned optionally only if the query parameter `withLatestValues=true` is used.
  * 
- * > **⚠️ Feature Preview:** The feature is part of the Latest Measurement feature which is still under public feature preview.
+ * > **������ Feature Preview:** The feature is part of the Latest Measurement feature which is still under public feature preview.
  */
 class C8yLatestMeasurements {
 

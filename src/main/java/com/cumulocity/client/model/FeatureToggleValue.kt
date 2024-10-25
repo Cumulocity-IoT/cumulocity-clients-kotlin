@@ -4,8 +4,12 @@
 package com.cumulocity.client.model
 import com.google.gson.Gson
 
-data class ApplicationVersionTag(var tags: Array<String>?) {
-	constructor() : this(tags = null)
+class FeatureToggleValue {
+
+	/**
+	 * Current value of the feature toggle marking whether the feature is active or not.
+	 */
+	var active: Boolean? = null
 
 	override fun toString(): String {
 		return Gson().toJson(this).toString()

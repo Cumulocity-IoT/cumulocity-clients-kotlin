@@ -109,6 +109,8 @@ interface DeviceStatisticsApi {
 	 * Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/json")
 	@GET("/tenant/statistics/device/{tenantId}/monthly/{date}")
@@ -151,6 +153,8 @@ interface DeviceStatisticsApi {
 	 * Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/json")
 	@GET("/tenant/statistics/device/{tenantId}/daily/{date}")

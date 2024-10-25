@@ -83,8 +83,12 @@ interface ChildOperationsApi {
 	 * When set to `true`, the returned result will contain the total number of children in the respective objects (`childAdditions`, `childAssets` and `childDevices`).
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.managedobjectreferencecollection+json")
 	@GET("/inventory/managedObjects/{id}/childAdditions")
@@ -201,7 +205,7 @@ interface ChildOperationsApi {
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.managedobject+json", "Accept:application/json"]) 
 	@POST("/inventory/managedObjects/{id}/childAdditions")
-	@ReadOnlyProperties("owner", "additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "self", "assetParents", "deviceParents", "id")
+	@ReadOnlyProperties("owner", "additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "c8y_LatestMeasurements", "self", "assetParents", "deviceParents", "id")
 	fun assignAsChildAddition(
 		@Body body: ManagedObject, 
 		@Path("id") id: String, 
@@ -339,8 +343,12 @@ interface ChildOperationsApi {
 	 * When set to `true`, the returned result will contain the total number of children in the respective objects (`childAdditions`, `childAssets` and `childDevices`).
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.managedobjectreferencecollection+json")
 	@GET("/inventory/managedObjects/{id}/childAssets")
@@ -457,7 +465,7 @@ interface ChildOperationsApi {
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.managedobject+json", "Accept:application/json"]) 
 	@POST("/inventory/managedObjects/{id}/childAssets")
-	@ReadOnlyProperties("owner", "additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "self", "assetParents", "deviceParents", "id")
+	@ReadOnlyProperties("owner", "additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "c8y_LatestMeasurements", "self", "assetParents", "deviceParents", "id")
 	fun assignAsChildAsset(
 		@Body body: ManagedObject, 
 		@Path("id") id: String, 
@@ -595,8 +603,12 @@ interface ChildOperationsApi {
 	 * When set to `true`, the returned result will contain the total number of children in the respective objects (`childAdditions`, `childAssets` and `childDevices`).
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.managedobjectreferencecollection+json")
 	@GET("/inventory/managedObjects/{id}/childDevices")
@@ -713,7 +725,7 @@ interface ChildOperationsApi {
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.managedobject+json", "Accept:application/json"]) 
 	@POST("/inventory/managedObjects/{id}/childDevices")
-	@ReadOnlyProperties("owner", "additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "self", "assetParents", "deviceParents", "id")
+	@ReadOnlyProperties("owner", "additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "c8y_LatestMeasurements", "self", "assetParents", "deviceParents", "id")
 	fun assignAsChildDevice(
 		@Body body: ManagedObject, 
 		@Path("id") id: String, 

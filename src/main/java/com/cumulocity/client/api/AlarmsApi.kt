@@ -108,8 +108,12 @@ interface AlarmsApi {
 	 * When set to `true` also alarms for related source devices will be included in the request. When this parameter is provided a `source` must be specified.
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.alarmcollection+json")
 	@GET("/alarm/alarms")
@@ -254,7 +258,7 @@ interface AlarmsApi {
 	 * 
 	 * Remove alarm collections specified by query parameters.
 	 * 
-	 * > **������ Important:** Note that it is possible to call this endpoint without providing any parameter - it will result in deleting all alarms and it is not recommended.Also note that DELETE requests are not synchronous. The response could be returned before the delete request has been completed.
+	 * > **������ Important:** DELETE requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`, `createdFrom`, `createdTo`.Also note that DELETE requests are not synchronous. The response could be returned before the delete request has been completed.
 	 * 
 	 * ##### Required roles
 	 * 

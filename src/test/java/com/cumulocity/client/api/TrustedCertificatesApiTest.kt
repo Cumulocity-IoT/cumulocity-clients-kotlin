@@ -18,8 +18,10 @@ import com.cumulocity.client.model.UploadedTrustedCertificate
 import com.cumulocity.client.model.UploadedTrustedCertificateCollection
 import com.cumulocity.client.model.TrustedCertificate
 import com.cumulocity.client.model.UploadedTrustedCertSignedVerificationCode
+import com.cumulocity.client.model.UpdateCRLEntries
 import com.cumulocity.client.model.TrustedCertificateCollection
 import com.cumulocity.client.model.VerifyCertificateChain
+import com.cumulocity.client.model.AccessToken
 
 // TODO parameterise servers
 class TrustedCertificatesApiTest {
@@ -43,4 +45,23 @@ class TrustedCertificatesApiTest {
         Assert.assertNotNull(api)
     }
     
+    @Test
+    fun testDownloadCrl() {
+    	val latch = CountDownLatch(1)
+        val api = TrustedCertificatesApi.Factory.create("tenant", this.clientBuilder)
+    	api.downloadCrl().enqueue(object : Callback<ResponseBody> {
+    
+    		override fun onResponse(call: Call<ResponseBody>?, response: Response<ResponseBody>?) {
+    			println(response?.message())
+    			println(response?.body())
+    			latch.countDown()
+    		}
+    
+    		override fun onFailure(call: Call<ResponseBody>?, t: Throwable?) {
+    			println(t)
+    			latch.countDown()
+    		}
+    	})
+    	latch.await()
+    }
 }

@@ -15,6 +15,7 @@ import retrofit2.Response
 import java.util.concurrent.CountDownLatch
 import okhttp3.ResponseBody
 import com.cumulocity.client.model.Tenant
+import com.cumulocity.client.model.TenantTfaStrategy
 import com.cumulocity.client.model.TenantCollection
 import com.cumulocity.client.model.CurrentTenant
 import com.cumulocity.client.model.TenantTfaData

@@ -7,7 +7,7 @@ import com.google.gson.Gson
 /**
  * The read only fragment which contains the latest measurements series reported by the device.
  * 
- * > **⚠️ Feature Preview:** The feature is part of the Latest Measurement feature which is still under public feature preview.
+ * > **������ Feature Preview:** The feature is part of the Latest Measurement feature which is still under public feature preview.
  */
 class LatestMeasurementFragment {
 

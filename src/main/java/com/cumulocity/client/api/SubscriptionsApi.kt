@@ -79,8 +79,12 @@ interface SubscriptionsApi {
 	 * **ⓘ Info:** Filtering by `typeFilter` may affect paging. Additional post filtering may be performed if OData-like expressions are used in the subscriptions.
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.subscriptioncollection+json")
 	@GET("/notification2/subscriptions")
@@ -162,7 +166,7 @@ interface SubscriptionsApi {
 	 * @param context
 	 * The context to which the subscription is associated.
 	 * 
-	 * **ⓘ Info:** If the value is `mo`, then `source` must also be provided in the query.
+	 * **ⓘ Info:** If the value is `mo` (managed object), then `source` must also be provided in the query.
 	 * @param source
 	 * The managed object ID to which the subscription is associated.
 	 */

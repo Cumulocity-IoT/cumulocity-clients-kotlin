@@ -75,8 +75,12 @@ interface GroupsApi {
 	 * Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects.
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.groupcollection+json")
 	@GET("/user/{tenantId}/groups")
@@ -143,12 +147,15 @@ interface GroupsApi {
 	 * Unique identifier of a Cumulocity IoT tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
+	 * @param forceLogout
+	 * If set to `true`, users with this global role will be force logged out.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.group+json")
 	@GET("/user/{tenantId}/groups/{groupId}")
 	fun getUserGroup(
 		@Path("tenantId") tenantId: String, 
-		@Path("groupId") groupId: Int
+		@Path("groupId") groupId: Int, 
+		@Query("forceLogout") forceLogout: Boolean? = null
 	): Call<Group>
 	
 	/**
@@ -176,6 +183,8 @@ interface GroupsApi {
 	 * Unique identifier of a Cumulocity IoT tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
+	 * @param forceLogout
+	 * If set to `true`, users with this global role will be force logged out.
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.group+json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.group+json"]) 
 	@PUT("/user/{tenantId}/groups/{groupId}")
@@ -183,7 +192,8 @@ interface GroupsApi {
 	fun updateUserGroup(
 		@Body body: Group, 
 		@Path("tenantId") tenantId: String, 
-		@Path("groupId") groupId: Int
+		@Path("groupId") groupId: Int, 
+		@Query("forceLogout") forceLogout: Boolean? = null
 	): Call<Group>
 	
 	/**
@@ -209,12 +219,15 @@ interface GroupsApi {
 	 * Unique identifier of a Cumulocity IoT tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
+	 * @param forceLogout
+	 * If set to `true`, users with this global role will be force logged out.
 	 */
 	@Headers("Accept:application/json")
 	@DELETE("/user/{tenantId}/groups/{groupId}")
 	fun deleteUserGroup(
 		@Path("tenantId") tenantId: String, 
-		@Path("groupId") groupId: Int
+		@Path("groupId") groupId: Int, 
+		@Query("forceLogout") forceLogout: Boolean? = null
 	): Call<ResponseBody>
 	
 	/**
@@ -277,8 +290,12 @@ interface GroupsApi {
 	 * Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects.
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.groupreferencecollection+json")
 	@GET("/user/{tenantId}/users/{userId}/groups")

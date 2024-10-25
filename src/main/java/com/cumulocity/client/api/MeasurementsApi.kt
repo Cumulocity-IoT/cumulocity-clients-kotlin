@@ -17,7 +17,6 @@ import retrofit2.http.Headers
 import okhttp3.OkHttpClient
 import retrofit2.converter.gson.ReadOnlyProperties
 import okhttp3.ResponseBody
-import com.cumulocity.client.supplementary.SeparatedQueryParameter
 import com.cumulocity.client.model.Measurement
 import com.cumulocity.client.model.MeasurementCollection
 import com.cumulocity.client.model.MeasurementSeries
@@ -92,8 +91,12 @@ interface MeasurementsApi {
 	 * A characteristic which identifies the measurement.
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.measurementcollection+json")
 	@GET("/measurement/measurements")
@@ -121,7 +124,7 @@ interface MeasurementsApi {
 	 * * `value` - The value of the individual measurement. The maximum precision for floating point numbers is 64-bit IEEE 754. For integers it's a 64-bit two's complement integer. The `value` is mandatory for a fragment.
 	 * * `unit` - The unit of the measurements.
 	 * 
-	 * Review the [System of units](#section/System-of-units) section for details about the conversions of units. Also review the [Naming conventions of fragments](https://cumulocity.com/guides/concepts/domain-model/#naming-conventions-of-fragments) in the Concepts guide.
+	 * Review the [System of units](#section/System-of-units) section for details about the conversions of units. Also review [Getting started > Technical concepts > Cumulocity IoT's domain model > Inventory > Fragments > Naming conventions of fragments](https://cumulocity.com/docs/concepts/domain-model/#naming-conventions-of-fragments) in the Cumulocity IoT user documentation.
 	 * 
 	 * The example below uses `c8y_Steam` in the request body to illustrate a fragment for recording temperature measurements.
 	 * 
@@ -130,7 +133,7 @@ interface MeasurementsApi {
 	 * 
 	 * It is also possible to create multiple measurements at once by sending a `measurements` array containing all the measurements to be created. The content type must be `application/vnd.com.nsn.cumulocity.measurementcollection+json`.
 	 * 
-	 * > **ⓘ Info:** For more details about fragments with specific meanings, review the sections [Device management library](#section/Device-management-library) and [Sensor library](#section/Sensor-library).
+	 * > **ⓘ Info:** For more details about fragments with specific meanings, refer to [Device management & connectivity > Device integration > Fragment library](https://cumulocity.com/docs/device-integration/fragment-library/) in the Cumulocity IoT user documentation.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -167,7 +170,7 @@ interface MeasurementsApi {
 	 * * `value` - The value of the individual measurement. The maximum precision for floating point numbers is 64-bit IEEE 754. For integers it's a 64-bit two's complement integer. The `value` is mandatory for a fragment.
 	 * * `unit` - The unit of the measurements.
 	 * 
-	 * Review the [System of units](#section/System-of-units) section for details about the conversions of units. Also review the [Naming conventions of fragments](https://cumulocity.com/guides/concepts/domain-model/#naming-conventions-of-fragments) in the Concepts guide.
+	 * Review the [System of units](#section/System-of-units) section for details about the conversions of units. Also review [Getting started > Technical concepts > Cumulocity IoT's domain model > Inventory > Fragments > Naming conventions of fragments](https://cumulocity.com/docs/concepts/domain-model/#naming-conventions-of-fragments) in the Cumulocity IoT user documentation.
 	 * 
 	 * The example below uses `c8y_Steam` in the request body to illustrate a fragment for recording temperature measurements.
 	 * 
@@ -176,7 +179,7 @@ interface MeasurementsApi {
 	 * 
 	 * It is also possible to create multiple measurements at once by sending a `measurements` array containing all the measurements to be created. The content type must be `application/vnd.com.nsn.cumulocity.measurementcollection+json`.
 	 * 
-	 * > **ⓘ Info:** For more details about fragments with specific meanings, review the sections [Device management library](#section/Device-management-library) and [Sensor library](#section/Sensor-library).
+	 * > **ⓘ Info:** For more details about fragments with specific meanings, refer to [Device management & connectivity > Device integration > Fragment library](https://cumulocity.com/docs/device-integration/fragment-library/) in the Cumulocity IoT user documentation.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -210,7 +213,7 @@ interface MeasurementsApi {
 	 * 
 	 * DELETE requests are not synchronous. The response could be returned before the delete request has been completed. This may happen especially when there are a lot of measurements to be deleted.
 	 * 
-	 * > **������ Important:** Note that it is possible to call this endpoint without providing any parameter - it may result in deleting all measurements and it is not recommended.
+	 * > **������ Important:** DELETE requires at least one of the following parameters: `source`, `dateFrom`, `dateTo`.
 	 * In case of enhanced time series measurements, both `dateFrom` and `dateTo` parameters must be truncated to full hours (for example, 2022-08-19T14:00:00.000Z), otherwise an error will be returned.The `fragmentType` parameter allows to delete measurements only by a measurement fragment when enhanced time series measurements are used.It's not possible to delete by a custom (non-measurement) fragment.
 	 * 
 	 * Example for a valid measurement value fragment:
@@ -360,7 +363,7 @@ interface MeasurementsApi {
 	 * @param series
 	 * The specific series to search for.
 	 * 
-	 * **ⓘ Info:** If you query for multiple series at once, comma-separate the values.
+	 * **ⓘ Info:** If you want to query multiple series at once, you must specify the parameter multiple times.
 	 * @param source
 	 * The managed object ID to which the measurement is associated.
 	 */
@@ -371,7 +374,7 @@ interface MeasurementsApi {
 		@Query("dateFrom") dateFrom: String, 
 		@Query("dateTo") dateTo: String, 
 		@Query("revert") revert: Boolean? = null, 
-		@Query("series") series: SeparatedQueryParameter<String>? = null, 
+		@Query("series") series: Array<String>? = null, 
 		@Query("source") source: String
 	): Call<MeasurementSeries>
 }

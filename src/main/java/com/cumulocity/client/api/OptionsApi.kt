@@ -54,6 +54,7 @@ interface OptionsApi {
 	 * 
 	 * Retrieve all the options available on the tenant.
 	 * 
+	 * > **������ Important:** Note that Enterprise Tenants are also allowed to read inherited tenant options from the management tenant.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -72,6 +73,8 @@ interface OptionsApi {
 	 * Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.optioncollection+json")
 	@GET("/tenant/options")
@@ -94,7 +97,7 @@ interface OptionsApi {
 	 * 
 	 * **access.control**
 	 * 
-	 * | Key |	Default value |	Predefined | Description ||--|--|--|--|| allow.origin | * | Yes | Comma separated list of domains allowed for execution of CORS. Wildcards are allowed (for example, `*.cumuclocity.com`) |
+	 * | Key |	Default value |	Predefined | Description ||--|--|--|--|| allow.origin | * | Yes | Comma separated list of domains allowed for execution of CORS. Wildcards are allowed (for example, `*.cumulocity.com`) |
 	 * 
 	 * **alarm.type.mapping**
 	 * 
@@ -140,6 +143,7 @@ interface OptionsApi {
 	 * 
 	 * Retrieve all the options (by a specified category) on your tenant.
 	 * 
+	 * > **������ Important:** Note that Enterprise Tenants are also allowed to read inherited tenant options from the management tenant.
 	 * 
 	 * ##### Required roles
 	 * 
@@ -195,6 +199,7 @@ interface OptionsApi {
 	 * 
 	 * Retrieve a specific option (by a given category and key) on your tenant.
 	 * 
+	 * > **������ Important:** Note that Enterprise Tenants are also allowed to read inherited tenant options from the management tenant.
 	 * 
 	 * ##### Required roles
 	 * 

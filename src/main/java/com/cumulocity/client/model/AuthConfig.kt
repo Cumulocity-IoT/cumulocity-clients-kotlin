@@ -66,7 +66,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	var onNewUser: OnNewUser? = null
 
 	/**
-	 * SSO specific. URL used for redirecting to the Cumulocity IoT platform.
+	 * SSO specific. URL used for redirecting to the Cumulocity IoT platform. Do not set or leave it empty to allow SSO flow to be controlled by client (UI) applications.
 	 */
 	var redirectToPlatform: String? = null
 
@@ -78,7 +78,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	var self: String? = null
 
 	/**
-	 * The session configuration properties are only available for OAuth internal. See [Changing settings > OAuth internal](https://cumulocity.com/guides/users-guide/administration/#oauth-internal) for more details.
+	 * The session configuration properties are only available for OAI-Secure. See [Platform administration > Authentication > Basic settings > OAI Secure session configuration ](https://cumulocity.com/docs/authentication/basic-settings/#oai-secure-session-configuration) in the Cumulocity IoT user documentation.
 	 */
 	var sessionConfiguration: OAuthSessionConfiguration? = null
 
@@ -93,6 +93,11 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	var template: String? = null
 
 	var tokenRequest: RequestRepresentation? = null
+
+	/**
+	 * If set to `true`, user data and the userId are retrieved using the claims from the id_token; otherwise, they are based on the access_token.
+	 */
+	var useIdToken: Boolean? = null
 
 	/**
 	 * SSO specific. Points to the field in the obtained JWT access token that should be used as the username in the Cumulocity IoT platform.
@@ -221,6 +226,11 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 				 * If set to `true`, dynamic access mapping is only managed for global roles, applications and inventory roles which are listed in the configuration. Others remain unchanged.
 				 */
 				var manageRolesOnlyFromAccessMapping: Boolean? = null
+			
+				/**
+				 * If set to `true`, dynamic access mapping is performed using the claims from the id_token; otherwise, it is based on the access_token.
+				 */
+				var mapFromIdToken: Boolean? = null
 			
 				override fun toString(): String {
 					return Gson().toJson(this).toString()

@@ -93,8 +93,12 @@ interface OperationsApi {
 	 * Status of the operation.
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.operationcollection+json")
 	@GET("/devicecontrol/operations")
@@ -119,6 +123,10 @@ interface OperationsApi {
 	 * Create an operation.
 	 * 
 	 * It is possible to add custom fragments to operations, for example `com_cumulocity_model_WebCamDevice` is a custom object of the webcam operation.
+	 * 
+	 * There are some custom fragments which are used by web applications (like Device management) to provide additional context to operations, for example:
+	 * 
+	 * * `description` - this fragment can be used to provide a brief user-friendly description of the operation which is later displayed in the operations list views within web applications.
 	 * 
 	 * 
 	 * ##### Required roles

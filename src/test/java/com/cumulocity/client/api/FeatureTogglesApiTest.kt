@@ -14,16 +14,12 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.concurrent.CountDownLatch
 import okhttp3.ResponseBody
-import com.cumulocity.client.supplementary.SeparatedQueryParameter
-import com.cumulocity.client.model.User
-import com.cumulocity.client.model.SubscribedUser
-import com.cumulocity.client.model.UserCollection
-import com.cumulocity.client.model.UserTfaData
-import com.cumulocity.client.model.UserReferenceCollection
-import com.cumulocity.client.model.UserReference
+import com.cumulocity.client.model.FeatureToggleValue
+import com.cumulocity.client.model.FeatureToggle
+import com.cumulocity.client.model.TenantFeatureToggleValue
 
 // TODO parameterise servers
-class UsersApiTest {
+class FeatureTogglesApiTest {
 
 	private var clientBuilder: OkHttpClient.Builder = OkHttpClient.Builder()
 	
@@ -40,8 +36,27 @@ class UsersApiTest {
 
     @Test
     fun testFactoryCreatesObject() {
-        val api = UsersApi.Factory.create("your tenant")
+        val api = FeatureTogglesApi.Factory.create("your tenant")
         Assert.assertNotNull(api)
     }
     
+    @Test
+    fun testListCurrentTenantFeatures() {
+    	val latch = CountDownLatch(1)
+        val api = FeatureTogglesApi.Factory.create("tenant", this.clientBuilder)
+    	api.listCurrentTenantFeatures().enqueue(object : Callback<Array<FeatureToggle>> {
+    
+    		override fun onResponse(call: Call<Array<FeatureToggle>>?, response: Response<Array<FeatureToggle>>?) {
+    			println(response?.message())
+    			println(response?.body())
+    			latch.countDown()
+    		}
+    
+    		override fun onFailure(call: Call<Array<FeatureToggle>>?, t: Throwable?) {
+    			println(t)
+    			latch.countDown()
+    		}
+    	})
+    	latch.await()
+    }
 }

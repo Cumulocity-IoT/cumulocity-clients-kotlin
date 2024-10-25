@@ -3,9 +3,21 @@
 
 package com.cumulocity.client.model
 import com.google.gson.Gson
+import com.google.gson.annotations.SerializedName
 
-data class ApplicationVersionTag(var tags: Array<String>?) {
-	constructor() : this(tags = null)
+data class TenantTfaStrategy(var strategy: Strategy?) {
+	constructor() : this(strategy = null)
+
+	/**
+	 * Two-factor authentication strategy.
+	 */
+	enum class Strategy(val value: String) {
+		@SerializedName(value = "SMS")
+		SMS("SMS"),
+		@SerializedName(value = "TOTP")
+		TOTP("TOTP")
+	}
+
 
 	override fun toString(): String {
 		return Gson().toJson(this).toString()

@@ -18,6 +18,7 @@ import okhttp3.OkHttpClient
 import retrofit2.converter.gson.ReadOnlyProperties
 import okhttp3.ResponseBody
 import com.cumulocity.client.model.Tenant
+import com.cumulocity.client.model.TenantTfaStrategy
 import com.cumulocity.client.model.TenantCollection
 import com.cumulocity.client.model.CurrentTenant
 import com.cumulocity.client.model.TenantTfaData
@@ -36,7 +37,7 @@ import com.cumulocity.client.model.TenantTfaData
  * > **������ Important:** For support user access, the tenant ID must be used and not the tenant domain.
  * See [Tenant > Current tenant](#operation/getCurrentTenantResource) for information on how to retrieve the tenant ID and domain of the current tenant via the API.
  * 
- * In the UI, the tenant ID is displayed in the user dropdown menu, see [Getting started > User options and settings](https://cumulocity.com/guides/users-guide/getting-started/#user-settings) in the User guide.
+ * In the UI, the tenant ID is displayed in the user dropdown menu, see [Getting started > Get familiar with the UI > User options and settings](https://cumulocity.com/docs/get-familiar-with-the-ui/user-settings/) in the Cumulocity IoT user documentation.
  * 
  * ### Access rights and permissions
  * 
@@ -46,7 +47,7 @@ import com.cumulocity.client.model.TenantTfaData
  * 
  * In the RBAC approach, managing access is the most complicated part because a misconfiguration can potentially give customers access to data that they must not see, like other customers' data. The inventory roles allow you to granularly define access for only certain parts of data, but they don't protect you from accidental misconfigurations. A limitation here is that customers won't be able to create their own roles.
  * 
- * For more details, see [RBAC versus multi-tenancy approach](https://cumulocity.com/guides/concepts/tenant-hierarchy/#comparison).
+ * For more details, see [RBAC versus multi-tenancy approach](https://cumulocity.com/docs/concepts/tenant-hierarchy/#comparison-of-various-use-cases).
  * 
  * > **ⓘ Info:** The Accept header should be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
@@ -95,8 +96,12 @@ interface TenantsApi {
 	 * Indicates how many entries of the collection shall be returned. The upper limit for one page is 2,000 objects.
 	 * @param withTotalElements
 	 * When set to `true`, the returned result will contain in the statistics object the total number of elements. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalElements` statistics are cached for 10 seconds.
 	 * @param withTotalPages
 	 * When set to `true`, the returned result will contain in the statistics object the total number of pages. Only applicable on [range queries](https://en.wikipedia.org/wiki/Range_query_(database)).
+	 * 
+	 * **ⓘ Info:** To improve performance, the `totalPages` statistics are cached for 10 seconds.
 	 * @param company
 	 * Company name associated with the Cumulocity IoT tenant.
 	 * @param domain
@@ -288,4 +293,33 @@ interface TenantsApi {
 	fun getTenantTfaSettings(
 		@Path("tenantId") tenantId: String
 	): Call<TenantTfaData>
+	
+	/**
+	 * Sets TFA settings for a specific tenant
+	 * 
+	 * Sets the two-factor authentication settings of a specific tenant for a specific tenant ID.
+	 * 
+	 * 
+	 * ##### Required roles
+	 * 
+	 *  ((ROLE_TENANT_MANAGEMENT_ADMIN *OR* ROLE_TENANT_MANAGEMENT_UPDATE) *AND* (the current tenant is its parent *OR* the current user belongs to the tenant))) 
+	 * 
+	 * ##### Response Codes
+	 * 
+	 * The following table gives an overview of the possible response codes and their meanings:
+	 * 
+	 * * HTTP 204 The tenant's TFA configuration was updated.
+	 * * HTTP 401 Authentication information is missing or invalid.
+	 * * HTTP 404 Tenant not found.
+	 * 
+	 * @param body
+	 * @param tenantId
+	 * Unique identifier of a Cumulocity IoT tenant.
+	 */
+	@Headers(*["Content-Type:application/json", "Accept:application/json"]) 
+	@PUT("/tenant/tenants/{tenantId}/tfa")
+	fun updateTenantTfaSettings(
+		@Body body: TenantTfaStrategy, 
+		@Path("tenantId") tenantId: String
+	): Call<ResponseBody>
 }

@@ -4,23 +4,17 @@
 package com.cumulocity.client.model
 import com.google.gson.Gson
 
-/**
- * The read only fragment which contains the latest measurements series values reported by the device.
- * 
- * > **������ Feature Preview:** The feature is part of the Latest Measurement feature which is still under public feature preview.
- */
-data class LatestMeasurementValue(var value: Number?) {
-	constructor() : this(value = null)
+class TenantFeatureToggleValue {
 
 	/**
-	 * The unit of the measurement series.
+	 * Identifier of a tenant this feature toggle value is for.
 	 */
-	var unit: String? = null
+	var tenantId: String? = null
 
 	/**
-	 * The time of the measurement series.
+	 * Current value of the feature toggle marking whether the feature is active or not.
 	 */
-	var time: String? = null
+	var active: Boolean? = null
 
 	override fun toString(): String {
 		return Gson().toJson(this).toString()
