@@ -6,7 +6,7 @@ plugins {
 
 jar {
 	archiveBaseName = 'cumulocity-clients-kotlin'
-	archiveVersion =  '-8'
+	archiveVersion =  '-11'
 }
 
 repositories {
@@ -18,7 +18,7 @@ publishing {
 		maven(MavenPublication) {
 			groupId = 'com.cumulocity'
 			artifactId = 'cumulocity-clients-kotlin'
-			version = '-8'
+			version = '-11'
 			from components.java
 		}
 	}
