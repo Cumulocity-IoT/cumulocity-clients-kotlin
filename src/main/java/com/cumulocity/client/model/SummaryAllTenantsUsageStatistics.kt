@@ -77,6 +77,16 @@ class SummaryAllTenantsUsageStatistics {
 	var measurementsCreatedCount: Int? = null
 
 	/**
+	 * Number of created operations.
+	 */
+	var operationsCreatedCount: Int? = null
+
+	/**
+	 * Number of updates made to the operations.
+	 */
+	var operationsUpdatedCount: Int? = null
+
+	/**
 	 * ID of the parent tenant.
 	 */
 	var parentTenantId: String? = null

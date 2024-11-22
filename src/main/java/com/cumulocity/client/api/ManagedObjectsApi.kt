@@ -22,6 +22,7 @@ import com.cumulocity.client.supplementary.SeparatedQueryParameter
 import com.cumulocity.client.model.ManagedObject
 import com.cumulocity.client.model.ManagedObjectUser
 import com.cumulocity.client.model.ManagedObjectCollection
+import com.cumulocity.client.model.ManagedObjectAvailability
 import com.cumulocity.client.model.SupportedMeasurements
 import com.cumulocity.client.model.SupportedSeries
 
@@ -259,7 +260,7 @@ interface ManagedObjectsApi {
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.managedobject+json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.managedobject+json"]) 
 	@PUT("/inventory/managedObjects/{id}")
-	@ReadOnlyProperties("owner", "additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "c8y_LatestMeasurements", "self", "assetParents", "deviceParents", "id")
+	@ReadOnlyProperties("additionParents", "lastUpdated", "childDevices", "childAssets", "creationTime", "childAdditions", "c8y_LatestMeasurements", "self", "assetParents", "deviceParents", "id")
 	fun updateManagedObject(
 		@Body body: ManagedObject, 
 		@Path("id") id: String, 
@@ -324,16 +325,16 @@ interface ManagedObjectsApi {
 	 * 
 	 * * HTTP 200 The request has succeeded and the date is sent in the response.
 	 * * HTTP 401 Authentication information is missing or invalid.
-	 * * HTTP 404 Managed object not found.
+	 * * HTTP 404 A device with provided ID is not monitored.
 	 * 
 	 * @param id
 	 * Unique identifier of the managed object.
 	 */
-	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, text/plain, application/json")
+	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/json")
 	@GET("/inventory/managedObjects/{id}/availability")
 	fun getLatestAvailability(
 		@Path("id") id: String
-	): Call<String>
+	): Call<ManagedObjectAvailability>
 	
 	/**
 	 * Retrieve all supported measurement fragments of a specific managed object

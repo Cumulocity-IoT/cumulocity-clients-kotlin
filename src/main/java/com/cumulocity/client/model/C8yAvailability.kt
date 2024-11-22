@@ -5,14 +5,14 @@ package com.cumulocity.client.model
 import com.google.gson.Gson
 
 /**
- * The availability information computed by Cumulocity IoT is stored in fragments `c8y_Availability` and `c8y_Connection` of the device.
+ * The availability information computed by Cumulocity IoT is stored in fragments `c8y_Availability` of the device.
  */
 class C8yAvailability {
 
 	/**
-	 * The current status, one of `AVAILABLE`, `CONNECTED`, `MAINTENANCE`, `DISCONNECTED`.
+	 * The current status of availability, one of `AVAILABLE`, `UNAVAILABLE`, `MAINTENANCE`.
 	 */
-	var status: C8yAvailabilityStatus? = null
+	var status: C8yAvailabilityDataStatus? = null
 
 	/**
 	 * The time when the device sent the last message to Cumulocity IoT.

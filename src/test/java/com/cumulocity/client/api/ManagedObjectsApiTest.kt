@@ -18,6 +18,7 @@ import com.cumulocity.client.supplementary.SeparatedQueryParameter
 import com.cumulocity.client.model.ManagedObject
 import com.cumulocity.client.model.ManagedObjectUser
 import com.cumulocity.client.model.ManagedObjectCollection
+import com.cumulocity.client.model.ManagedObjectAvailability
 import com.cumulocity.client.model.SupportedMeasurements
 import com.cumulocity.client.model.SupportedSeries
 

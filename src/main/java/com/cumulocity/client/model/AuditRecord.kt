@@ -212,7 +212,7 @@ data class AuditRecord(var activity: String?, var source: Source?, var text: Str
 
 
 	/**
-	 * The managed object to which the audit is associated.
+	 * The platform component ID to which the audit is associated.
 	 */
 	data class Source(var id: String?) {
 		constructor() : this(id = null)

@@ -4,15 +4,11 @@
 package com.cumulocity.client.model
 import com.google.gson.Gson
 
-/**
- * The connection information computed by Cumulocity IoT is stored in fragments `c8y_Connection` of the device.
- */
-class C8yConnection {
+class MeasurementSeriesValue {
 
-	/**
-	 * The current status of connection, one of `CONNECTED`, `DISCONNECTED`, `MAINTENANCE`.
-	 */
-	var status: C8yAvailabilityConnectionStatus? = null
+	var min: Number? = null
+
+	var max: Number? = null
 
 	override fun toString(): String {
 		return Gson().toJson(this).toString()

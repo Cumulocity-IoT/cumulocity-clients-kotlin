@@ -26,6 +26,11 @@ class MeasurementSeries {
 	 */
 	class Values {
 	
+		var additionalProperties: MutableMap<String, Array<MeasurementSeriesValue>> = hashMapOf()
+		
+		operator fun get(key: String): Array<MeasurementSeriesValue>? = additionalProperties[key]
+		operator fun set(key: String, value: Array<MeasurementSeriesValue>): Array<MeasurementSeriesValue>? = additionalProperties.put(key, value)
+	
 		override fun toString(): String {
 			return Gson().toJson(this).toString()
 		}

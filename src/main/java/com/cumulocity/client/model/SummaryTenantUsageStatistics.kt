@@ -75,6 +75,16 @@ class SummaryTenantUsageStatistics {
 	var measurementsCreatedCount: Int? = null
 
 	/**
+	 * Number of created operations.
+	 */
+	var operationsCreatedCount: Int? = null
+
+	/**
+	 * Number of updates made to the operations.
+	 */
+	var operationsUpdatedCount: Int? = null
+
+	/**
 	 * Number of requests that were made against the tenant. Updated every 5 minutes. The following requests are not included:
 	 * 
 	 * * Internal SmartREST requests used to resolve templates
