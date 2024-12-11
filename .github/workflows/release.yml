@@ -11,10 +11,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Download version
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: version
 
@@ -37,19 +37,19 @@ jobs:
           prerelease: false
           
       - name: Download aar artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: cumulocity-clients-kotlin-aar
           path: artifacts
 
       - name: Download jar artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: cumulocity-clients-kotlin-jar
           path: artifacts
 
       - name: Download mavenRepo
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: cumulocity-clients-kotlin-maven
           path: mavenRepo
