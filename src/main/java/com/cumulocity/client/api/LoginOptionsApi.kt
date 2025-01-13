@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2023 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
+// Copyright (c) 2014-2024 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
 // Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG.
 
 package com.cumulocity.client.api
@@ -25,7 +25,7 @@ import com.cumulocity.client.model.LoginOptionCollection
 /**
  * API methods to retrieve the login options configured in the tenant.
  * 
- * More detailed information about the parameters and their meaning can be found in [Platform administration > Standard tenant administration > Changing settings](https://cumulocity.com/docs/standard-tenant/changing-settings/) in the Cumulocity IoT user documentation.
+ * More detailed information about the parameters and their meaning can be found in [Platform administration > Standard tenant administration > Changing settings](https://www.cumulocity.com/docs/standard-tenant/changing-settings/) in the Cumulocity IoT user documentation.
  * 
  * > **ⓘ Info:** If OAuth external is the only login option shown in the response, the user will be automatically redirected to the SSO login screen.
  */

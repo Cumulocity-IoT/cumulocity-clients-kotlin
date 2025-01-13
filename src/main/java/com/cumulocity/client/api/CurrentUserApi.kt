@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2023 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
+// Copyright (c) 2014-2024 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
 // Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG.
 
 package com.cumulocity.client.api
@@ -130,7 +130,7 @@ interface CurrentUserApi {
 	 * 
 	 * Generate a secret code to create a QR code to set up the two-factor authentication functionality using a TFA app/service.
 	 * 
-	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://cumulocity.com/docs/authentication/tfa/) in the Cumulocity IoT user documentation.
+	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://www.cumulocity.com/docs/authentication/tfa/) in the Cumulocity IoT user documentation.
 	 * 
 	 * 
 	 * ##### Required roles
@@ -177,7 +177,7 @@ interface CurrentUserApi {
 	 * 
 	 * Activates or deactivates the two-factor authentication feature for the current user.
 	 * 
-	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://cumulocity.com/docs/authentication/tfa/) in the Cumulocity IoT user documentation.
+	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://www.cumulocity.com/docs/authentication/tfa/) in the Cumulocity IoT user documentation.
 	 * 
 	 * 
 	 * ##### Required roles

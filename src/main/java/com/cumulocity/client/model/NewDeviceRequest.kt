@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2023 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
+// Copyright (c) 2014-2024 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
 // Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG.
 
 package com.cumulocity.client.model
@@ -48,7 +48,7 @@ class NewDeviceRequest {
 	var creationTime: String? = null
 
 	/**
-	 * When accepting a device request, the security token is verified against the token submitted by the device when requesting credentials.See [Security token policy](https://cumulocity.com/docs/device-management-application/registering-devices/#security-token-policy) for details on configuration.See [Create device credentials](/#operation/postDeviceCredentialsCollectionResource) for details on creating token for device registration.`securityToken` parameter can be added only when submitting `ACCEPTED` status.
+	 * When accepting a device request, the security token is verified against the token submitted by the device when requesting credentials.See [Security token policy](https://www.cumulocity.com/docs/device-management-application/registering-devices/#security-token-policy) for details on configuration.See [Create device credentials](/#operation/postDeviceCredentialsCollectionResource) for details on creating token for device registration.`securityToken` parameter can be added only when submitting `ACCEPTED` status.
 	 */
 	var securityToken: String? = null
 

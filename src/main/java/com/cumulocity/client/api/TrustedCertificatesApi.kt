@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2023 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
+// Copyright (c) 2014-2024 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.
 // Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG.
 
 package com.cumulocity.client.api
@@ -32,7 +32,7 @@ import com.cumulocity.client.model.AccessToken
 /**
  * API methods for managing trusted certificates used to establish device connections via MQTT.
  * 
- * More detailed information about trusted certificates and their role can be found in [Device management > Device management application > Managing device data](https://cumulocity.com/docs/device-management-application/managing-device-data/) in the Cumulocity IoT user documentation.
+ * More detailed information about trusted certificates and their role can be found in [Device management > Device management application > Managing device data](https://www.cumulocity.com/docs/device-management-application/managing-device-data/) in the Cumulocity IoT user documentation.
  * 
  * > **ⓘ Info:** The Accept header must be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
