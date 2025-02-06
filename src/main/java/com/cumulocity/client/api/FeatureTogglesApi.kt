@@ -199,7 +199,7 @@ interface FeatureTogglesApi {
 	 * @param featureKey
 	 * A unique key of the feature toggle.
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers(*["Content-Type:application/json", "Accept:application/json"]) 
 	@PUT("/features/{featureKey}/by-tenant/{tenantId}")
@@ -231,7 +231,7 @@ interface FeatureTogglesApi {
 	 * @param featureKey
 	 * A unique key of the feature toggle.
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers("Accept:application/json")
 	@DELETE("/features/{featureKey}/by-tenant/{tenantId}")

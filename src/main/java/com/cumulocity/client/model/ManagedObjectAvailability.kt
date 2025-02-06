@@ -12,12 +12,12 @@ class ManagedObjectAvailability {
 	var deviceId: String? = null
 
 	/**
-	 * The identifier used in the external system that Cumulocity IoT interfaces with.
+	 * The identifier used in the external system that Cumulocity interfaces with.
 	 */
 	var externalId: String? = null
 
 	/**
-	 * The time when the device sent the last message to Cumulocity IoT.
+	 * The time when the device sent the last message to Cumulocity.
 	 */
 	var lastMessage: String? = null
 

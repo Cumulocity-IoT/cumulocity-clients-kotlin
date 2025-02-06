@@ -135,7 +135,7 @@ interface RolesApi {
 	 * * HTTP 404 Group not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 * @param currentPage
@@ -175,7 +175,7 @@ interface RolesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 */
@@ -207,7 +207,7 @@ interface RolesApi {
 	 * * HTTP 404 Role not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 * @param roleId
@@ -247,7 +247,7 @@ interface RolesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 */
@@ -279,7 +279,7 @@ interface RolesApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 * @param roleId

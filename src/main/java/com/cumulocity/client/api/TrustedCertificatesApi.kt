@@ -32,7 +32,7 @@ import com.cumulocity.client.model.AccessToken
 /**
  * API methods for managing trusted certificates used to establish device connections via MQTT.
  * 
- * More detailed information about trusted certificates and their role can be found in [Device management > Device management application > Managing device data](https://www.cumulocity.com/docs/device-management-application/managing-device-data/) in the Cumulocity IoT user documentation.
+ * More detailed information about trusted certificates and their role can be found in [Device management > Device management application > Managing device data](https://www.cumulocity.com/docs/device-management-application/managing-device-data/) in the Cumulocity user documentation.
  * 
  * > **ⓘ Info:** The Accept header must be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
@@ -78,7 +78,7 @@ interface TrustedCertificatesApi {
 	 * * HTTP 404 Tenant not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param currentPage
 	 * The current page of the paginated results.
 	 * @param pageSize
@@ -105,7 +105,7 @@ interface TrustedCertificatesApi {
 	/**
 	 * Add a new certificate
 	 * 
-	 * Add a new trusted certificate to a specific tenant (by a given ID) which can be further used by the devices to establish connections with the Cumulocity IoT platform.
+	 * Add a new trusted certificate to a specific tenant (by a given ID) which can be further used by the devices to establish connections with the Cumulocity platform.
 	 * 
 	 * 
 	 * ##### Required roles
@@ -124,13 +124,13 @@ interface TrustedCertificatesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param xCumulocityProcessingMode
 	 * Used to explicitly control the processing mode of the request. See [Processing mode](#processing-mode) for more details.
 	 * @param addToTrustStore
 	 * If set to `true` the certificate is added to the truststore.
 	 * 
-	 * The truststore contains all trusted certificates. A connection to a device is only established if it connects to Cumulocity IoT with a certificate in the truststore.
+	 * The truststore contains all trusted certificates. A connection to a device is only established if it connects to Cumulocity with a certificate in the truststore.
 	 */
 	@Headers(*["Content-Type:application/json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/json"]) 
 	@POST("/tenant/tenants/{tenantId}/trusted-certificates")
@@ -144,7 +144,7 @@ interface TrustedCertificatesApi {
 	/**
 	 * Add multiple certificates
 	 * 
-	 * Add multiple trusted certificates to a specific tenant (by a given ID) which can be further used by the devices to establish connections with the Cumulocity IoT platform.
+	 * Add multiple trusted certificates to a specific tenant (by a given ID) which can be further used by the devices to establish connections with the Cumulocity platform.
 	 * 
 	 * 
 	 * ##### Required roles
@@ -163,11 +163,11 @@ interface TrustedCertificatesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param addToTrustStore
 	 * If set to `true` the certificate is added to the truststore.
 	 * 
-	 * The truststore contains all trusted certificates. A connection to a device is only established if it connects to Cumulocity IoT with a certificate in the truststore.
+	 * The truststore contains all trusted certificates. A connection to a device is only established if it connects to Cumulocity with a certificate in the truststore.
 	 */
 	@Headers(*["Content-Type:application/json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/json"]) 
 	@POST("/tenant/tenants/{tenantId}/trusted-certificates/bulk")
@@ -196,7 +196,7 @@ interface TrustedCertificatesApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param fingerprint
 	 * Unique identifier of a trusted certificate.
 	 */
@@ -228,7 +228,7 @@ interface TrustedCertificatesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param fingerprint
 	 * Unique identifier of a trusted certificate.
 	 */
@@ -260,7 +260,7 @@ interface TrustedCertificatesApi {
 	 * * HTTP 404 Certificate not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param fingerprint
 	 * Unique identifier of a trusted certificate.
 	 */
@@ -293,7 +293,7 @@ interface TrustedCertificatesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param fingerprint
 	 * Unique identifier of a trusted certificate.
 	 */
@@ -325,7 +325,7 @@ interface TrustedCertificatesApi {
 	 * * HTTP 422 The verification was not successful. Certificate not confirmed.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param fingerprint
 	 * Unique identifier of a trusted certificate.
 	 */
@@ -355,7 +355,7 @@ interface TrustedCertificatesApi {
 	 * * HTTP 404 Trusted certificate not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param fingerprint
 	 * Unique identifier of a trusted certificate.
 	 */
@@ -428,7 +428,7 @@ interface TrustedCertificatesApi {
 	/**
 	 * Add revoked certificates
 	 * 
-	 * > **ⓘ Info:** A certificate revocation list (CRL) is a list of digital certificatesthat have been revoked by the issuing certificate authority (CA) before expiration date.In Cumulocity IoT, a CRL check can be in online or offline mode or both.
+	 * > **ⓘ Info:** A certificate revocation list (CRL) is a list of digital certificatesthat have been revoked by the issuing certificate authority (CA) before expiration date.In Cumulocity, a CRL check can be in online or offline mode or both.
 	 * An endpoint to add revoked certificate serial numbers for offline CRL check via payload or file.
 	 * 
 	 * For payload, a JSON object required with list of CRL entries, for example:
@@ -488,7 +488,7 @@ interface TrustedCertificatesApi {
 	/**
 	 * Add revoked certificates
 	 * 
-	 * > **ⓘ Info:** A certificate revocation list (CRL) is a list of digital certificatesthat have been revoked by the issuing certificate authority (CA) before expiration date.In Cumulocity IoT, a CRL check can be in online or offline mode or both.
+	 * > **ⓘ Info:** A certificate revocation list (CRL) is a list of digital certificatesthat have been revoked by the issuing certificate authority (CA) before expiration date.In Cumulocity, a CRL check can be in online or offline mode or both.
 	 * An endpoint to add revoked certificate serial numbers for offline CRL check via payload or file.
 	 * 
 	 * For payload, a JSON object required with list of CRL entries, for example:

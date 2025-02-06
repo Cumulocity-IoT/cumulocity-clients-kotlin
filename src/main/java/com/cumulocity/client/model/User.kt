@@ -18,7 +18,7 @@ class User {
 	var customProperties: CustomProperties? = null
 
 	/**
-	 * The user's display name in Cumulocity IoT.
+	 * The user's display name in Cumulocity.
 	 */
 	var displayName: String? = null
 
@@ -95,7 +95,7 @@ class User {
 	var self: String? = null
 
 	/**
-	 * When set to `true`, this field will cause Cumulocity IoT to send a password reset email to the email address specified.
+	 * When set to `true`, this field will cause Cumulocity to send a password reset email to the email address specified.
 	 * 
 	 * If there is no password specified when creating a new user with a POST request, this must be specified and it must be set to `true`.
 	 */

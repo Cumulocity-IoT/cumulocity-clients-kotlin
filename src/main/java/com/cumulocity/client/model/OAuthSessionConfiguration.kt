@@ -5,7 +5,7 @@ package com.cumulocity.client.model
 import com.google.gson.Gson
 
 /**
- * The session configuration properties are only available for OAI-Secure. See [Platform administration > Authentication > Basic settings > OAI Secure session configuration ](https://www.cumulocity.com/docs/authentication/basic-settings/#oai-secure-session-configuration) in the Cumulocity IoT user documentation.
+ * The session configuration properties are only available for OAI-Secure. See [Platform administration > Authentication > Basic settings > OAI Secure session configuration ](https://www.cumulocity.com/docs/authentication/basic-settings/#oai-secure-session-configuration) in the Cumulocity user documentation.
  */
 class OAuthSessionConfiguration {
 

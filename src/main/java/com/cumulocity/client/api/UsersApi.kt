@@ -27,7 +27,7 @@ import com.cumulocity.client.model.UserReferenceCollection
 import com.cumulocity.client.model.UserReference
 
 /**
- * API methods to create, retrieve, update and delete users in Cumulocity IoT.
+ * API methods to create, retrieve, update and delete users in Cumulocity.
  * 
  * > **ⓘ Info:** The Accept header should be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
@@ -72,7 +72,7 @@ interface UsersApi {
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param currentPage
 	 * The current page of the paginated results.
 	 * @param groups
@@ -135,7 +135,7 @@ interface UsersApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.user+json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.user+json"]) 
 	@POST("/user/{tenantId}/users")
@@ -167,7 +167,7 @@ interface UsersApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 */
@@ -208,7 +208,7 @@ interface UsersApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 */
@@ -241,7 +241,7 @@ interface UsersApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 */
@@ -272,7 +272,7 @@ interface UsersApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 */
@@ -303,7 +303,7 @@ interface UsersApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param username
 	 * The username of the a user.
 	 */
@@ -334,7 +334,7 @@ interface UsersApi {
 	 * * HTTP 404 Group not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 * @param currentPage
@@ -380,7 +380,7 @@ interface UsersApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 */
@@ -412,7 +412,7 @@ interface UsersApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 * @param userId
@@ -473,7 +473,7 @@ interface UsersApi {
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers("Accept:application/json")
 	@POST("/user/logout/{tenantId}/allUsers")

@@ -26,9 +26,9 @@ import com.cumulocity.client.model.ApplicationCollection
  * 
  * ###��Application names
  * 
- * For each tenant, Cumulocity IoT manages the subscribed applications and provides a number of applications of various types.In case you want to subscribe a tenant to an application using an API, you must use the application name in the argument (as name).
+ * For each tenant, Cumulocity manages the subscribed applications and provides a number of applications of various types.In case you want to subscribe a tenant to an application using an API, you must use the application name in the argument (as name).
  * 
- * Refer to the tables in [Platform administration > Standard tenant administration > Managing the ecosystem > Managing applications](https://www.cumulocity.com/docs/standard-tenant/ecosystem/#managing-applications) in the Cumulocity IoT user documentation for the respective application name to be used.
+ * Refer to the tables in [Platform administration > Standard tenant administration > Managing the ecosystem > Managing applications](https://www.cumulocity.com/docs/standard-tenant/ecosystem/#managing-applications) in the Cumulocity user documentation for the respective application name to be used.
  * 
  * > **ⓘ Info:** The Accept header should be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
@@ -333,7 +333,7 @@ interface ApplicationsApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.applicationcollection+json")
 	@GET("/application/applicationsByTenant/{tenantId}")
@@ -359,7 +359,7 @@ interface ApplicationsApi {
 	 * * HTTP 401 Authentication information is missing or invalid.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param currentPage
 	 * The current page of the paginated results.
 	 * @param pageSize

@@ -34,7 +34,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	var buttonName: String? = null
 
 	/**
-	 * SSO specific. The identifier of the Cumulocity IoT tenant on the external authorization server.
+	 * SSO specific. The identifier of the Cumulocity tenant on the external authorization server.
 	 */
 	var clientId: String? = null
 
@@ -66,7 +66,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	var onNewUser: OnNewUser? = null
 
 	/**
-	 * SSO specific. URL used for redirecting to the Cumulocity IoT platform. Do not set or leave it empty to allow SSO flow to be controlled by client (UI) applications.
+	 * SSO specific. URL used for redirecting to the Cumulocity platform. Do not set or leave it empty to allow SSO flow to be controlled by client (UI) applications.
 	 */
 	var redirectToPlatform: String? = null
 
@@ -78,12 +78,12 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	var self: String? = null
 
 	/**
-	 * The session configuration properties are only available for OAI-Secure. See [Platform administration > Authentication > Basic settings > OAI Secure session configuration ](https://www.cumulocity.com/docs/authentication/basic-settings/#oai-secure-session-configuration) in the Cumulocity IoT user documentation.
+	 * The session configuration properties are only available for OAI-Secure. See [Platform administration > Authentication > Basic settings > OAI Secure session configuration ](https://www.cumulocity.com/docs/authentication/basic-settings/#oai-secure-session-configuration) in the Cumulocity user documentation.
 	 */
 	var sessionConfiguration: OAuthSessionConfiguration? = null
 
 	/**
-	 * SSO specific and authorization server dependent. Describes the method of access token signature verification on the Cumulocity IoT platform.
+	 * SSO specific and authorization server dependent. Describes the method of access token signature verification on the Cumulocity platform.
 	 */
 	var signatureVerificationConfig: SignatureVerificationConfig? = null
 
@@ -100,12 +100,12 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	var useIdToken: Boolean? = null
 
 	/**
-	 * SSO specific. Points to the field in the obtained JWT access token that should be used as the username in the Cumulocity IoT platform.
+	 * SSO specific. Points to the field in the obtained JWT access token that should be used as the username in the Cumulocity platform.
 	 */
 	var userIdConfig: UserIdConfig? = null
 
 	/**
-	 * Indicates whether user data are managed internally by the Cumulocity IoT platform or by an external server. Note that the value is case insensitive.
+	 * Indicates whether user data are managed internally by the Cumulocity platform or by an external server. Note that the value is case insensitive.
 	 */
 	var userManagementSource: UserManagementSource? = null
 
@@ -142,7 +142,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	}
 
 	/**
-	 * Indicates whether user data are managed internally by the Cumulocity IoT platform or by an external server. Note that the value is case insensitive.
+	 * Indicates whether user data are managed internally by the Cumulocity platform or by an external server. Note that the value is case insensitive.
 	 */
 	enum class UserManagementSource(val value: String) {
 		@SerializedName(value = "INTERNAL")
@@ -315,7 +315,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 	}
 
 	/**
-	 * SSO specific and authorization server dependent. Describes the method of access token signature verification on the Cumulocity IoT platform.
+	 * SSO specific and authorization server dependent. Describes the method of access token signature verification on the Cumulocity platform.
 	 */
 	class SignatureVerificationConfig {
 	
@@ -457,7 +457,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 
 
 	/**
-	 * SSO specific. Points to the field in the obtained JWT access token that should be used as the username in the Cumulocity IoT platform.
+	 * SSO specific. Points to the field in the obtained JWT access token that should be used as the username in the Cumulocity platform.
 	 */
 	class UserIdConfig {
 	
@@ -472,7 +472,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 		var jwtField: String? = null
 	
 		/**
-		 * Not recommended. If set to `true`, all SSO users will share one account in the Cumulocity IoT platform.
+		 * Not recommended. If set to `true`, all SSO users will share one account in the Cumulocity platform.
 		 */
 		var useConstantValue: Boolean? = null
 	
@@ -493,7 +493,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 		var enabled: Boolean? = null
 	
 		/**
-		 * Points to the claim of the access token from the authorization server that must be used as the username in the Cumulocity IoT platform.
+		 * Points to the claim of the access token from the authorization server that must be used as the username in the Cumulocity platform.
 		 */
 		var userOrAppIdConfig: UserOrAppIdConfig? = null
 	
@@ -525,7 +525,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 		}
 	
 		/**
-		 * Points to the claim of the access token from the authorization server that must be used as the username in the Cumulocity IoT platform.
+		 * Points to the claim of the access token from the authorization server that must be used as the username in the Cumulocity platform.
 		 */
 		class UserOrAppIdConfig {
 		
@@ -540,7 +540,7 @@ data class AuthConfig(var providerName: String?, var type: Type?) {
 			var jwtField: String? = null
 		
 			/**
-			 * Not recommended. If set to `true`, all users share a single account in the Cumulocity IoT platform.
+			 * Not recommended. If set to `true`, all users share a single account in the Cumulocity platform.
 			 */
 			var useConstantValue: Boolean? = null
 		

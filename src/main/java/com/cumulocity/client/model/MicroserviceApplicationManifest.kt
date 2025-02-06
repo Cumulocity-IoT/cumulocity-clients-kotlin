@@ -122,7 +122,7 @@ class MicroserviceApplicationManifest {
 	class Extensions {
 	
 		/**
-		 * The relative path in Cumulocity IoT for this microservice application.
+		 * The relative path in Cumulocity for this microservice application.
 		 */
 		var path: String? = null
 	

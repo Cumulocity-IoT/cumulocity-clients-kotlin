@@ -67,7 +67,7 @@ interface TenantApplicationsApi {
 	 * * HTTP 404 Tenant not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param currentPage
 	 * The current page of the paginated results.
 	 * @param pageSize
@@ -118,7 +118,7 @@ interface TenantApplicationsApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.applicationreference+json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.applicationreference+json"]) 
 	@POST("/tenant/tenants/{tenantId}/applications")
@@ -147,7 +147,7 @@ interface TenantApplicationsApi {
 	 * * HTTP 404 Tenant not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param applicationId
 	 * Unique identifier of the application.
 	 */

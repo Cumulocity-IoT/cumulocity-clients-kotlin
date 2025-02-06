@@ -5,7 +5,7 @@ package com.cumulocity.client.model
 import com.google.gson.Gson
 
 /**
- * Request a device to send a log file and view it in Cumulocity IoT's log viewer.
+ * Request a device to send a log file and view it in Cumulocity's log viewer.
  */
 class C8yLogfileRequest {
 
@@ -30,7 +30,7 @@ class C8yLogfileRequest {
 	var searchText: String? = null
 
 	/**
-	 * Upper limit of the number of lines that should be sent to Cumulocity IoT after filtering.
+	 * Upper limit of the number of lines that should be sent to Cumulocity after filtering.
 	 */
 	var maximumLines: Int? = null
 

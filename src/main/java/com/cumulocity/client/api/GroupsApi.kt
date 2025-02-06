@@ -24,7 +24,7 @@ import com.cumulocity.client.model.GroupReferenceCollection
 /**
  * API methods to create, retrieve, update and delete user groups.
  * 
- * > **������ Important:** In the Cumulocity IoT user interface, user groups are referred to as "global roles". Global roles are not to be confused with user roles.
+ * > **������ Important:** In the Cumulocity user interface, user groups are referred to as "global roles". Global roles are not to be confused with user roles.
  * > **ⓘ Info:** The Accept header should be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
 interface GroupsApi {
@@ -68,7 +68,7 @@ interface GroupsApi {
 	 * * HTTP 403 Not enough permissions/roles to perform this operation.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param currentPage
 	 * The current page of the paginated results.
 	 * @param pageSize
@@ -114,7 +114,7 @@ interface GroupsApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers(*["Content-Type:application/vnd.com.nsn.cumulocity.group+json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.group+json"]) 
 	@POST("/user/{tenantId}/groups")
@@ -144,7 +144,7 @@ interface GroupsApi {
 	 * * HTTP 404 Group not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 * @param forceLogout
@@ -180,7 +180,7 @@ interface GroupsApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 * @param forceLogout
@@ -216,7 +216,7 @@ interface GroupsApi {
 	 * * HTTP 404 Group not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupId
 	 * Unique identifier of the user group.
 	 * @param forceLogout
@@ -250,7 +250,7 @@ interface GroupsApi {
 	 * * HTTP 404 Group not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param groupName
 	 * The name of the user group.
 	 */
@@ -281,7 +281,7 @@ interface GroupsApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 * @param currentPage

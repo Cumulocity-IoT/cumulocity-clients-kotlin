@@ -28,7 +28,7 @@ class Operation {
 	/**
 	 * Reference to a bulk operation ID if this operation was scheduled from a bulk operation.
 	 */
-	var bulkOperationId: String? = null
+	var bulkOperationId: Int? = null
 
 	/**
 	 * Date and time when the operation was created in the database.
@@ -65,7 +65,7 @@ class Operation {
 	/**
 	 * It is possible to add an arbitrary number of additional properties as a list of key-value pairs, for example, `"property1": {}`, `"property2": "value"`. These properties are known as custom fragments and can be of any type, for example, object or string. Each custom fragment is identified by a unique name.
 	 * 
-	 * Review [Getting started > Technical concepts > Cumulocity IoT's domain model > Inventory > Fragments > Naming conventions of fragments](https://www.cumulocity.com/docs/concepts/domain-model/#naming-conventions-of-fragments) in the Cumulocity IoT user documentation as there are characters that can not be used when naming custom fragments.
+	 * Review [Getting started > Technical concepts > Cumulocity's domain model > Inventory > Fragments > Naming conventions of fragments](https://www.cumulocity.com/docs/concepts/domain-model/#naming-conventions-of-fragments) in the Cumulocity user documentation as there are characters that can not be used when naming custom fragments.
 	 */
 	var customFragments: MutableMap<String, Any> = hashMapOf()
 	

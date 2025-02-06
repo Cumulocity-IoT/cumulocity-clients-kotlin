@@ -21,7 +21,7 @@ import com.cumulocity.client.model.CurrentUserTotpCode
 import com.cumulocity.client.model.CurrentUserTotpSecret
 
 /**
- * The current user is the user that is currently authenticated with Cumulocity IoT for the API calls.
+ * The current user is the user that is currently authenticated with Cumulocity for the API calls.
  * 
  * > **ⓘ Info:** The Accept header should be provided in all PUT requests, otherwise an empty response body will be returned.
  */
@@ -130,7 +130,7 @@ interface CurrentUserApi {
 	 * 
 	 * Generate a secret code to create a QR code to set up the two-factor authentication functionality using a TFA app/service.
 	 * 
-	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://www.cumulocity.com/docs/authentication/tfa/) in the Cumulocity IoT user documentation.
+	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://www.cumulocity.com/docs/authentication/tfa/) in the Cumulocity user documentation.
 	 * 
 	 * 
 	 * ##### Required roles
@@ -177,7 +177,7 @@ interface CurrentUserApi {
 	 * 
 	 * Activates or deactivates the two-factor authentication feature for the current user.
 	 * 
-	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://www.cumulocity.com/docs/authentication/tfa/) in the Cumulocity IoT user documentation.
+	 * For more information about the feature, see [Platform administration > Authentication > Two-factor authentication](https://www.cumulocity.com/docs/authentication/tfa/) in the Cumulocity user documentation.
 	 * 
 	 * 
 	 * ##### Required roles

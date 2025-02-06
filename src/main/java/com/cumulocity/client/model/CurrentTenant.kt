@@ -27,7 +27,7 @@ class CurrentTenant {
 	var domainName: String? = null
 
 	/**
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	var name: String? = null
 

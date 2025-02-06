@@ -22,7 +22,7 @@ import com.cumulocity.client.model.Event
 import com.cumulocity.client.model.EventCollection
 
 /**
- * Events are used to pass real-time information through Cumulocity IoT.
+ * Events are used to pass real-time information through Cumulocity.
  * 
  * > **ⓘ Info:** The Accept header should be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */

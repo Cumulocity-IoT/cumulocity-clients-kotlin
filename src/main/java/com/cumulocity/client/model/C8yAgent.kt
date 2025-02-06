@@ -5,7 +5,7 @@ package com.cumulocity.client.model
 import com.google.gson.Gson
 
 /**
- * The term "agent" refers to the piece of software that connects a device with Cumulocity IoT.
+ * The term "agent" refers to the piece of software that connects a device with Cumulocity.
  */
 data class C8yAgent(var name: String?, var version: String?) {
 	constructor() : this(name = null, version = null)

@@ -84,12 +84,11 @@ data class NotificationSubscription(var context: Context?, var subscription: Str
 		/**
 		 * For the `mo` (managed object) context, notifications from the `alarms`, `alarmsWithChildren`, `events`, `eventsWithChildren`, `managedobjects` (Inventory), `measurements` and `operations` (Device control) APIs can be subscribed to.The `alarmsWithChildren` and `eventsWithChildren` APIs subscribe to alarms and events respectively from the managed object identified by the `source.id` field, and all of its descendant managed objects.
 		 * 
-		 * For the `tenant` context, notifications from the `alarms`, `events` and `managedobjects` (Inventory) APIs can be subscribed to.
+		 * For the `tenant` context, notifications from the `alarms`, `events`, `managedobjects` (Inventory), and `operations` APIs can be subscribed to.
 		 * 
 		 * For all contexts, the `*` (wildcard) value can be used to subscribe to notifications from all of the available APIs in that context.
 		 * 
 		 * > **ⓘ Info:** The wildcard `*` cannot be used in conjunction with other values.
-		 * > **ⓘ Info:** When filtering Events in the `tenant` context it is required to also specify the `typeFilter`.
 		 */
 		var apis: Array<String>? = null
 	

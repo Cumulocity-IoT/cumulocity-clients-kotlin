@@ -51,7 +51,7 @@ class LoginOption {
 	var self: String? = null
 
 	/**
-	 * The session configuration properties are only available for OAI-Secure. See [Platform administration > Authentication > Basic settings > OAI Secure session configuration ](https://www.cumulocity.com/docs/authentication/basic-settings/#oai-secure-session-configuration) in the Cumulocity IoT user documentation.
+	 * The session configuration properties are only available for OAI-Secure. See [Platform administration > Authentication > Basic settings > OAI Secure session configuration ](https://www.cumulocity.com/docs/authentication/basic-settings/#oai-secure-session-configuration) in the Cumulocity user documentation.
 	 */
 	var sessionConfiguration: OAuthSessionConfiguration? = null
 
@@ -71,7 +71,7 @@ class LoginOption {
 	var type: String? = null
 
 	/**
-	 * Specifies if the users are managed internally by Cumulocity IoT (`INTERNAL`) or if the users data are managed by a external system (`REMOTE`).
+	 * Specifies if the users are managed internally by Cumulocity (`INTERNAL`) or if the users data are managed by a external system (`REMOTE`).
 	 */
 	var userManagementSource: String? = null
 

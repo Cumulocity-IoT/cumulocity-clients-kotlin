@@ -121,7 +121,7 @@ interface ExternalIDsApi {
 	 * * HTTP 404 External ID not found.
 	 * 
 	 * @param type
-	 * The identifier used in the external system that Cumulocity IoT interfaces with.
+	 * The identifier used in the external system that Cumulocity interfaces with.
 	 * @param externalId
 	 * The type of the external identifier.
 	 */
@@ -151,7 +151,7 @@ interface ExternalIDsApi {
 	 * * HTTP 404 External ID not found.
 	 * 
 	 * @param type
-	 * The identifier used in the external system that Cumulocity IoT interfaces with.
+	 * The identifier used in the external system that Cumulocity interfaces with.
 	 * @param externalId
 	 * The type of the external identifier.
 	 */

@@ -65,7 +65,7 @@ class Tenant {
 	var domain: String? = null
 
 	/**
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	var id: String? = null
 

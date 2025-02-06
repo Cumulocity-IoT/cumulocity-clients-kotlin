@@ -19,7 +19,7 @@ data class NotificationTokenClaims(var subscriber: String?, var subscription: St
 	var type: Type? = null
 
 	/**
-	 * If `true`, the token will be securely signed by the Cumulocity IoT platform.
+	 * If `true`, the token will be securely signed by the Cumulocity platform.
 	 */
 	var signed: Boolean? = null
 

@@ -143,7 +143,7 @@ interface BulkOperationsApi {
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.bulkoperation+json")
 	@GET("/devicecontrol/bulkoperations/{id}")
 	fun getBulkOperation(
-		@Path("id") id: String
+		@Path("id") id: Int
 	): Call<BulkOperation>
 	
 	/**
@@ -175,7 +175,7 @@ interface BulkOperationsApi {
 	@ReadOnlyProperties("generalStatus", "self", "progress", "id", "status")
 	fun updateBulkOperation(
 		@Body body: BulkOperation, 
-		@Path("id") id: String, 
+		@Path("id") id: Int, 
 		@Header("X-Cumulocity-Processing-Mode") xCumulocityProcessingMode: String? = null
 	): Call<BulkOperation>
 	
@@ -206,7 +206,7 @@ interface BulkOperationsApi {
 	@Headers("Accept:application/json")
 	@DELETE("/devicecontrol/bulkoperations/{id}")
 	fun deleteBulkOperation(
-		@Path("id") id: String, 
+		@Path("id") id: Int, 
 		@Header("X-Cumulocity-Processing-Mode") xCumulocityProcessingMode: String? = null
 	): Call<ResponseBody>
 }

@@ -22,7 +22,7 @@ import com.cumulocity.client.model.Operation
 import com.cumulocity.client.model.OperationCollection
 
 /**
- * API methods to create, retrieve, update and delete operations in Cumulocity IoT.
+ * API methods to create, retrieve, update and delete operations in Cumulocity.
  * 
  * > **ⓘ Info:** The Accept header should be provided in all POST/PUT requests, otherwise an empty response body will be returned.
  */
@@ -104,7 +104,7 @@ interface OperationsApi {
 	@GET("/devicecontrol/operations")
 	fun getOperations(
 		@Query("agentId") agentId: String? = null, 
-		@Query("bulkOperationId") bulkOperationId: String? = null, 
+		@Query("bulkOperationId") bulkOperationId: Int? = null, 
 		@Query("currentPage") currentPage: Int? = null, 
 		@Query("dateFrom") dateFrom: String? = null, 
 		@Query("dateTo") dateTo: String? = null, 

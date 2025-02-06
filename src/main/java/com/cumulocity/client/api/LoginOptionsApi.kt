@@ -25,7 +25,7 @@ import com.cumulocity.client.model.LoginOptionCollection
 /**
  * API methods to retrieve the login options configured in the tenant.
  * 
- * More detailed information about the parameters and their meaning can be found in [Platform administration > Standard tenant administration > Changing settings](https://www.cumulocity.com/docs/standard-tenant/changing-settings/) in the Cumulocity IoT user documentation.
+ * More detailed information about the parameters and their meaning can be found in [Platform administration > Standard tenant administration > Changing settings](https://www.cumulocity.com/docs/standard-tenant/changing-settings/) in the Cumulocity user documentation.
  * 
  * > **ⓘ Info:** If OAuth external is the only login option shown in the response, the user will be automatically redirected to the SSO login screen.
  */
@@ -68,7 +68,7 @@ interface LoginOptionsApi {
 	 * 
 	 * **ⓘ Info:** The `tenantId` parameter must not be present in the request when using the `management` parameter, otherwise it will cause an error.
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers("Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.loginoptioncollection+json")
 	@GET("/tenant/loginOptions")
@@ -217,7 +217,7 @@ interface LoginOptionsApi {
 	 * @param typeOrId
 	 * The type or ID of the login option. The type's value is case insensitive and can be `OAUTH2`, `OAUTH2_INTERNAL` or `BASIC`.
 	 * @param targetTenant
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 */
 	@Headers(*["Content-Type:application/json", "Accept:application/vnd.com.nsn.cumulocity.error+json, application/vnd.com.nsn.cumulocity.authconfig+json"]) 
 	@PUT("/tenant/loginOptions/{typeOrId}/restrict")

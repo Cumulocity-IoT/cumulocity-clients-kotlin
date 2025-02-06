@@ -5,7 +5,7 @@ package com.cumulocity.client.model
 import com.google.gson.Gson
 
 /**
- * The connection information computed by Cumulocity IoT is stored in fragments `c8y_Connection` of the device.
+ * The connection information computed by Cumulocity is stored in fragments `c8y_Connection` of the device.
  */
 class C8yConnection {
 

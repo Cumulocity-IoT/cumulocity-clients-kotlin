@@ -218,7 +218,7 @@ interface InventoryRolesApi {
 	 * * HTTP 404 User not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 */
@@ -253,7 +253,7 @@ interface InventoryRolesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 */
@@ -286,7 +286,7 @@ interface InventoryRolesApi {
 	 * * HTTP 404 Role not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 * @param id
@@ -324,7 +324,7 @@ interface InventoryRolesApi {
 	 * 
 	 * @param body
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 * @param id
@@ -359,7 +359,7 @@ interface InventoryRolesApi {
 	 * * HTTP 404 Role not found.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param userId
 	 * Unique identifier of the a user.
 	 * @param id

@@ -14,7 +14,7 @@ import okhttp3.OkHttpClient
 import com.cumulocity.client.model.DeviceStatisticsCollection
 
 /**
- * Device statistics are collected for each inventory object with at least one measurement, event or alarm. There are no additional checks if the inventory object is marked as device using the `c8y_IsDevice` fragment. When the first measurement, event or alarm is created for a specific inventory object, Cumulocity IoT is always considering this as a device and starts counting.
+ * Device statistics are collected for each inventory object with at least one measurement, event or alarm. There are no additional checks if the inventory object is marked as device using the `c8y_IsDevice` fragment. When the first measurement, event or alarm is created for a specific inventory object, Cumulocity is always considering this as a device and starts counting.
  * 
  * Device statistics are counted with daily and monthy rate. All requests are considered when counting device statistics, no matter which processing mode is used.
  * 
@@ -98,7 +98,7 @@ interface DeviceStatisticsApi {
 	 * * HTTP 403 Not authorized to perform this operation.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param date
 	 * Date (format YYYY-MM-dd) of the queried month (the day value is ignored).
 	 * @param currentPage
@@ -142,7 +142,7 @@ interface DeviceStatisticsApi {
 	 * * HTTP 403 Not authorized to perform this operation.
 	 * 
 	 * @param tenantId
-	 * Unique identifier of a Cumulocity IoT tenant.
+	 * Unique identifier of a Cumulocity tenant.
 	 * @param date
 	 * Date (format YYYY-MM-dd) of the queried day.
 	 * @param currentPage

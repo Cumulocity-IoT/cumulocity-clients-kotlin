@@ -19,7 +19,7 @@ data class UploadedTrustedCertificate(var certInPemFormat: String?, var status: 
 	var name: String? = null
 
 	/**
-	 * Indicates if the certificate is active and can be used by the device to establish a connection to the Cumulocity IoT platform.
+	 * Indicates if the certificate is active and can be used by the device to establish a connection to the Cumulocity platform.
 	 */
 	enum class Status(val value: String) {
 		@SerializedName(value = "ENABLED")
